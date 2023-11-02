@@ -8,4 +8,10 @@ typedef struct
     int dificuldade;
 }st_nivel;
 
-void palavra_aleatoria();
+char* palavra_aleatoria();
+
+void letra_verde(char ch);
+
+void letra_amarela(char ch);
+
+void tentativa_usuario();

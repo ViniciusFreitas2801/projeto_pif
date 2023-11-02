@@ -10,5 +10,7 @@ int main(){
 
     palavra_aleatoria();
 
+    tentativa_usuario();
+
     return 0;
 }

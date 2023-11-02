@@ -1,7 +1,7 @@
 #include "funcoes.h"
 
 //Puxa uma palavra aleatoria do arquivo txt
-void palavra_aleatoria()
+char* palavra_aleatoria()
 {
     FILE* f;
 
@@ -40,8 +40,59 @@ void palavra_aleatoria()
         atual++;
     }
     
-    printf("%s\n", palavra);
+    printf("%s\n\t", palavra);
     
     fclose(f);
     
+    return palavra;
+}
+
+void letra_verde(char ch)
+{
+    printf("\033[0;32m");
+    printf("%c", ch);
+
+    //Voltar padrao
+    printf("\033[0m");
+}
+
+void letra_amarela(char ch)
+{
+    printf("\033[0;33m");
+    printf("%c", ch);
+
+    //Volta ao padrao
+    printf("\033[0m");
+}
+
+void print_palavra(char palavra[6], char palavra_usuario[6])
+{
+    printf("%s", palavra);
+
+    for (int i = 0; i < 5; i++)
+    {
+        if (palavra[i] == palavra_usuario[i])
+        {
+            letra_verde(palavra[i]);
+        }
+        
+        else
+        {
+            printf("%c", palavra[i]);
+        }
+
+
+    }
+    
+}
+
+void tentativa_usuario()
+{
+    char tentativa[6];
+
+    scanf("%s", tentativa);
+
+    print_palavra(palavra_aleatoria(), tentativa);
+
+
 }
