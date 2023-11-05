@@ -1,4 +1,6 @@
 //Termo
+//1 - Gerar palavra OK
+//2 - Input do usuario
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -8,9 +10,15 @@
 //Main
 int main(){
 
+    printf("\tTERMO\n");
+
+    printf("_ _ _ _ _");
+
+    
+
     palavra_aleatoria();
 
-    tentativa_usuario();
+    input();
 
     return 0;
 }

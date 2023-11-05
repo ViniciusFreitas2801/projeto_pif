@@ -40,13 +40,11 @@ char* palavra_aleatoria()
         atual++;
     }
     
-    printf("%s\n\t", palavra);
-    
     fclose(f);
     
     return palavra;
 }
-
+/*
 void letra_verde(char ch)
 {
     printf("\033[0;32m");
@@ -64,35 +62,23 @@ void letra_amarela(char ch)
     //Volta ao padrao
     printf("\033[0m");
 }
-
-void print_palavra(char palavra[6], char palavra_usuario[6])
+*/
+void input()
 {
-    printf("%s", palavra);
+    char palavra_termo[6];
+    char resposta[6];
 
-    for (int i = 0; i < 5; i++)
+    strcpy(palavra_termo, palavra_aleatoria());
+
+    while (strcmp(resposta, palavra_termo) != 0)
     {
-        if (palavra[i] == palavra_usuario[i])
+        printf("\tDigite seu palpite: ");
+        scanf("\t%s", resposta);
+
+        if (strcmp(resposta, palavra_termo) == 0)
         {
-            letra_verde(palavra[i]);
+            printf("\tParabens, voce acertou!\n");
         }
         
-        else
-        {
-            printf("%c", palavra[i]);
-        }
-
-
     }
-    
-}
-
-void tentativa_usuario()
-{
-    char tentativa[6];
-
-    scanf("%s", tentativa);
-
-    print_palavra(palavra_aleatoria(), tentativa);
-
-
 }

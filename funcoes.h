@@ -10,8 +10,8 @@ typedef struct
 
 char* palavra_aleatoria();
 
-void letra_verde(char ch);
+//void letra_verde(char ch);
 
-void letra_amarela(char ch);
+//void letra_amarela(char ch);
 
-void tentativa_usuario();
+void input();
