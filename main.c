@@ -10,12 +10,6 @@
 //Main
 int main(){
 
-    printf("\tTERMO\n");
-
-    printf("_ _ _ _ _");
-
-    
-
     palavra_aleatoria();
 
     input();

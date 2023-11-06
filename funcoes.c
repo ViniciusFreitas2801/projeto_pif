@@ -67,6 +67,16 @@ void input()
 {
     char palavra_termo[6];
     char resposta[6];
+    char array[6] = {'_', '_', '_', '_', '_'};
+
+    printf("\tTERMO\n\n");
+
+    for (int i = 0; i < 5; i++)
+    {
+        printf("\t%c", array[i]);
+    }
+
+    printf("\n\n");
 
     strcpy(palavra_termo, palavra_aleatoria());
 
@@ -74,6 +84,12 @@ void input()
     {
         printf("\tDigite seu palpite: ");
         scanf("\t%s", resposta);
+
+        if ()
+        {
+            /* code */
+        }
+        
 
         if (strcmp(resposta, palavra_termo) == 0)
         {
