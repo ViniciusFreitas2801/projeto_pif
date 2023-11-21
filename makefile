@@ -1,5 +1,5 @@
 all:
-	gcc main.c funcoes.c -o termo.exe
+	gcc main.c ./src/*.c -I include -o termo.exe
 
 run:
 	./termo.exe
