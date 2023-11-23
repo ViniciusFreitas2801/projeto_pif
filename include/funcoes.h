@@ -5,15 +5,10 @@
 #include <ctype.h>
 #include <stdbool.h>
 
-typedef struct
+typedef struct st_status
 {
-    int tentativas1;
-    int tentativas2;
-    int tentativas3;
-    int tentativas4;
-    int tentativas5;
-    int tentativas6;
-    int morreu;
+    int tentativas;
+    struct st_status *next;
 }st_status;
 
 //char* palavra_aleatoria();
@@ -29,5 +24,15 @@ typedef struct
 void exibirPalavra(char *palavra, char *entrada);
 
 char* pedir_entrada();
+
+void add_node(st_status **head, int tentativas);
+
+void print_status(st_status *head, int num, char texto[]);
+
+int opcao_player();
+
+void limpar_terminal();
+
+void liberar_lista(st_status** head);
 
 //void minusculas(char** entrada);
